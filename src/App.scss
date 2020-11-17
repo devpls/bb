@@ -1,0 +1,10 @@
+.bb-wrapper {
+  padding: 10px 15px;
+  @include tablet {
+    padding: 15px 30px;
+  }
+  @include desktop {
+    margin: 0 auto;
+    width: 768px;
+  }
+}

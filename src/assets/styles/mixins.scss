@@ -1,0 +1,43 @@
+@mixin desktop {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin ie {
+  @media screen and (min-width: 0 \0) and (min-resolution: +72dpi) {
+    @content;
+  }
+}
+
+@mixin flex(
+  $display: flex,
+  $direction: row,
+  $wrap: nowrap,
+  $justify: flex-start,
+  $align-items: flex-start,
+  $aligncontent: stretch
+) {
+  align-content: $aligncontent;
+  align-items: $align-items;
+  display: $display;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  @include ie {
+    & > * {
+      display: block;
+      flex: 0 1 auto;
+    }
+  }
+
+  & > * {
+    min-width: 0;
+  }
+}

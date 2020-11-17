@@ -1,0 +1,42 @@
+.bb-show-page {
+  &__title {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  &__list {
+    margin-top: 15px;
+  }
+
+  &__season {
+    counter-reset: list;
+    padding: 10px;
+  }
+
+  &__episode {
+    margin-top: 10px;
+    padding-left: 25px;
+    position: relative;
+    z-index: 0;
+
+    & ~ & {
+      margin-top: 5px;
+    }
+
+    &::before {
+      content: counter(list) '.';
+      counter-increment: list;
+      left: 0;
+      position: absolute;
+      text-align: right;
+      top: 0;
+      width: 20px;
+    }
+  }
+
+  &__season-title {
+    span {
+      margin-right: 5px;
+    }
+  }
+}

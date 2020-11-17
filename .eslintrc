@@ -1,0 +1,31 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
+  },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error"
+    ],
+    "import/no-extraneous-dependencies": 0,
+    "react/jsx-filename-extension": 0,
+    "import/prefer-default-export": 0
+  }
+}
