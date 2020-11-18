@@ -35,7 +35,7 @@ export const Show = () => {
     return episodes.map((season, index) => {
       const seasonNumber = index + 1;
       return (
-        <div className={classes('season')}>
+        <div className={classes('season')} key={seasonNumber}>
           <h3 className={classes('season-title')}>
             <span>Season:</span>
             {seasonNumber}
